@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Manrope', 'Segoe UI', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  letter-spacing: 0;
+  background-color: #03050b;
+  background-attachment: fixed;
+  color: #a4aec4;
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-6 py-3 bg-transparent text-white font-bold rounded-md hover:bg-violet-500/10 transition-all duration-300 flex items-center gap-2 border border-violet-500 shadow-[0_0_18px_rgba(124,58,237,0.2)];
+  }
+
+  .btn-secondary {
+    @apply px-6 py-3 border border-slate-800 text-slate-300 font-bold rounded-md hover:border-violet-500 hover:text-white transition-all duration-300 flex items-center gap-2;
+  }
+
+  .btn-ghost {
+    @apply text-slate-400 hover:text-white transition-colors duration-300 flex items-center gap-2 font-bold;
+  }
+
+  .section-container {
+    @apply max-w-6xl mx-auto px-6 sm:px-10 lg:px-12;
+  }
+
+  .section-heading {
+    @apply text-3xl md:text-4xl font-bold text-white mb-4 tracking-tight;
+  }
+
+  .section-subheading {
+    @apply text-base text-slate-400 mb-12 font-normal;
+  }
+
+  .glass {
+    @apply backdrop-blur-md bg-[#0b0e18]/80 border border-slate-800;
+  }
+
+  .card {
+    @apply relative isolate overflow-hidden bg-[#0b0e18]/80 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 border border-slate-800;
+  }
+}
+
+.card::before,
+.skill-panel::before {
+  content: '';
+  position: absolute;
+  inset: -45%;
+  z-index: -1;
+  opacity: 0;
+  background: linear-gradient(115deg, transparent 38%, rgba(125, 211, 252, 0.08) 47%, rgba(124, 58, 237, 0.18) 54%, transparent 64%);
+  transform: translateX(-35%) rotate(8deg);
+  transition: opacity 300ms ease;
+}
+
+.card:hover::before,
+.skill-panel:hover::before {
+  opacity: 1;
+  animation: hover-sweep 1.6s ease-in-out infinite;
+}
+
+.card > *,
+.skill-panel > * {
+  position: relative;
+  z-index: 1;
+}
+
+.skill-panel {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+@keyframes hover-sweep {
+  0% { transform: translateX(-35%) rotate(8deg); }
+  50% { transform: translateX(35%) rotate(8deg); }
+  100% { transform: translateX(-35%) rotate(8deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card:hover::before,
+  .skill-panel:hover::before { animation: none; }
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.45;
+  background-image: linear-gradient(rgba(40, 57, 83, 0.22) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(40, 57, 83, 0.22) 1px, transparent 1px),
+    radial-gradient(circle at 15% 25%, rgba(70, 130, 190, 0.16) 1px, transparent 2px),
+    radial-gradient(circle at 75% 60%, rgba(124, 58, 237, 0.13) 1px, transparent 2px);
+  background-size: 39px 39px, 39px 39px, 260px 220px, 320px 280px;
+  z-index: 0;
+}
+
+#root {
+  position: relative;
+  z-index: 1;
+}
+
+nav, .section-title-wrap, .btn-primary, .btn-secondary, .btn-ghost {
+  font-family: 'DM Mono', 'Courier New', monospace;
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #7dd3fc 0%, #818cf8 55%, #7c3aed 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.section-title-wrap {
+  text-align: left;
+}
+
+.section-title-wrap .section-heading {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.section-title-wrap .section-heading::before {
+  content: '';
+  width: 3rem;
+  height: 3px;
+  flex: 0 0 auto;
+  background: linear-gradient(90deg, #7dd3fc, #7c3aed);
+}
+
+.section-number {
+  color: #f8fafc;
+}
+
+@media (max-width: 640px) {
+  .section-container { padding-left: 1.25rem; padding-right: 1.25rem; }
+  .section-title-wrap .section-heading { font-size: 1.7rem; }
+  .section-title-wrap .section-heading::before { width: 2rem; }
+}
+
+::selection { background: #6d28d9; color: white; }
+
+/* Smooth transitions for theme */
+* {
+  transition-property: background-color, border-color, color;
+  transition-duration: 200ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Disable transition on initial load */
+html.no-transition * {
+  transition: none !important;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #94a3b8;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #6b7280;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #475569;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
+}
