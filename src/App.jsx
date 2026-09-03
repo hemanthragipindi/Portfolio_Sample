@@ -11,6 +11,7 @@ import Certifications from './sections/Certifications';
 import Achievements from './sections/Achievements';
 import Testimonials from './sections/Testimonials';
 import Contact from './sections/Contact';
+import CareerDirection from './sections/CareerDirection';
 
 export default function App() {
   const [theme] = useState('dark');
@@ -39,6 +40,7 @@ export default function App() {
           <Education />
           <Certifications />
           <Achievements />
+          <CareerDirection />
           <Testimonials />
           <Contact />
         </main>

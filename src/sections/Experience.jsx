@@ -8,8 +8,8 @@ export default function Experience() {
     <section id="experience" className="py-14 md:py-16 lg:py-24">
       <div className="section-container">
         <SectionHeading
-          title="Work Experience"
-          subtitle="Hands-on experience building, shipping, and supporting production software."
+          title="Work Experience & Internship"
+          subtitle="Hands-on internship experience building, shipping, and supporting production software."
         />
 
         <div className="max-w-3xl mx-auto">
