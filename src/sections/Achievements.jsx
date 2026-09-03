@@ -28,7 +28,7 @@ const AnimatedCounter = ({ target, duration = 2 }) => {
 
 export default function Achievements() {
   return (
-    <section id="achievements" className="py-20 md:py-28">
+    <section id="achievements" className="py-14 md:py-20">
       <div className="section-container">
         <SectionHeading
           title="Achievements & Certifications"

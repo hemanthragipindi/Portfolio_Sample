@@ -12,6 +12,19 @@ export default function CertificationCard({ certification }) {
       transition={{ duration: 0.4 }}
       viewport={{ once: true }}
     >
+      <a
+        href={certification.image}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="mb-5 block overflow-hidden rounded-lg border border-slate-800 bg-slate-950"
+        aria-label={`Open ${certification.name} certificate`}
+      >
+        <img
+          src={certification.image}
+          alt={`${certification.name} certificate`}
+          className="h-40 w-full object-cover transition-transform duration-300 hover:scale-[1.03]"
+        />
+      </a>
       <div className="flex items-start gap-4">
         <div className="flex items-start justify-between mb-5">
           <div className="p-2.5 bg-violet-500/10 text-violet-300 rounded-lg shrink-0">
@@ -31,7 +44,7 @@ export default function CertificationCard({ certification }) {
           
           <div className="flex items-center justify-between mt-8 pt-3 border-t border-slate-800">
             <span className="text-[10px] text-slate-500 font-mono">{certification.year}</span>
-            <a href={certification.credentialUrl === '#' ? '#certifications' : certification.credentialUrl} target={certification.credentialUrl === '#' ? undefined : '_blank'} rel={certification.credentialUrl === '#' ? undefined : 'noopener noreferrer'} className="text-[10px] text-violet-300 inline-flex items-center gap-1 font-mono hover:text-white transition-colors">
+            <a href={certification.image} target="_blank" rel="noopener noreferrer" className="text-[10px] text-violet-300 inline-flex items-center gap-1 font-mono hover:text-white transition-colors">
               Preview <Eye size={12} />
             </a>
           </div>

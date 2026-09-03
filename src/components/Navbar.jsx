@@ -37,7 +37,7 @@ export default function Navbar({ theme, setTheme }) {
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
           >
-            <span>{personalInfo.name.split(' ')[0]}<span className="text-violet-500">Reddy</span></span>
+            <span>{personalInfo.name.split(' ')[0]}<span className="text-violet-500"> Hemanth Reddy</span></span>
           </motion.a>
 
           {/* Desktop Navigation */}

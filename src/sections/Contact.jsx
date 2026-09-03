@@ -87,7 +87,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-20 md:py-28 bg-[#050811]/80 border-y border-slate-900">
+    <section id="contact" className="py-14 md:py-20 bg-[#050811]/80 border-y border-slate-900">
       <div className="section-container">
         <SectionHeading
           title="Get in Touch"

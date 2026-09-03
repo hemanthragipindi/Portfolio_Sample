@@ -5,7 +5,7 @@ import { projects } from '../data/portfolioData';
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-20 md:py-28">
+    <section id="projects" className="py-14 md:py-20">
       <div className="section-container">
         <SectionHeading
           title="Featured Projects"
@@ -39,7 +39,7 @@ export default function Projects() {
             More experiments, learning projects, and contributions live on GitHub.
           </p>
           <motion.a
-            href="https://github.com"
+            href="https://github.com/hemanthragipindi"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block px-8 py-3 bg-slate-700 dark:bg-slate-800 text-white font-semibold rounded-md hover:bg-slate-800 dark:hover:bg-slate-700 hover:shadow-md transition-all duration-300 border border-slate-600 dark:border-slate-700"

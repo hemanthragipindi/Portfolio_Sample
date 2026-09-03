@@ -5,7 +5,7 @@ import { certifications } from '../data/portfolioData';
 
 export default function Certifications() {
   return (
-    <section id="certifications" className="py-20 md:py-28">
+    <section id="certifications" className="py-14 md:py-20">
       <div className="section-container">
         <SectionHeading
           title="Certifications"

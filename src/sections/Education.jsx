@@ -5,7 +5,7 @@ import { education } from '../data/portfolioData';
 
 export default function Education() {
   return (
-    <section id="education" className="py-20 md:py-28 bg-[#050811]/80 border-y border-slate-900">
+    <section id="education" className="py-14 md:py-20 bg-[#050811]/80 border-y border-slate-900">
       <div className="section-container">
         <SectionHeading
           title="Education"

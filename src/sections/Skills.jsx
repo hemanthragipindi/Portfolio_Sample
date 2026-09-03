@@ -31,7 +31,7 @@ export default function Skills() {
   }));
 
   return (
-    <section id="skills" className="py-16 md:py-20 lg:py-32">
+    <section id="skills" className="py-14 md:py-16 lg:py-24">
       <div className="section-container">
         <SectionHeading
           title="Skills & Proficiency"

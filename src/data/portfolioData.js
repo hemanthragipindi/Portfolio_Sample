@@ -200,7 +200,7 @@ export const projects = [
 
     liveUrl: "#",
 
-    githubUrl: "#",
+    githubUrl: "https://github.com/Keerthi-1216/Sentinel.git",
   },
 
 
@@ -249,7 +249,7 @@ export const projects = [
 
     liveUrl: "https://avani.vamancropscience.com",
 
-    githubUrl: "#",
+    githubUrl: "",
   },
 
 
@@ -443,6 +443,8 @@ export const certifications = [
 
     name: "Python Programming Certification",
 
+    image: "/python.png",
+
     issuer: "Coursera",
 
     year: "2026",
@@ -458,6 +460,8 @@ export const certifications = [
     id: 2,
 
     name: "Full Stack Web Development Certification",
+
+    image: "/webdevelopment.jpg",
 
     issuer: "Mind Luster",
 
@@ -475,6 +479,8 @@ export const certifications = [
 
     name: "Selenium Testing Certification",
 
+    image: "/selinum.png",
+
     issuer: "Coursera",
 
     year: "2026",
@@ -490,6 +496,8 @@ export const certifications = [
     id: 4,
 
     name: "Git & GitHub Certification",
+
+    image: "/git.png",
 
     issuer: "Coursera",
 

@@ -13,7 +13,7 @@ export default function About() {
   ];
 
   return (
-    <section id="about" className="py-20 md:py-28 bg-[#050811]/80 border-y border-slate-900">
+    <section id="about" className="py-14 md:py-20 bg-[#050811]/80 border-y border-slate-900">
       <div className="section-container">
         <SectionHeading
           title="About Me"
