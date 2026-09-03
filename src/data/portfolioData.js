@@ -5,6 +5,8 @@
 export const personalInfo = {
   name: "Ragipindi Hemanth Reddy",
 
+  image: "/hemanth.jpeg",
+
   role: "Full Stack Developer & Technical Lead",
 
   email: "ragipindihemanth713@gmail.com",

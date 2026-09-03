@@ -30,7 +30,7 @@ export default function Hero() {
       id="home"
       className="min-h-screen flex items-center pt-24 pb-16 md:pt-28 relative overflow-hidden bg-transparent"
     >
-      <div className="section-container">
+      <div className="section-container flex flex-col-reverse lg:flex-row lg:items-center lg:justify-between gap-12">
         <motion.div
           className="max-w-4xl"
           variants={container}
@@ -96,6 +96,19 @@ export default function Hero() {
               );
             })}
           </motion.div>
+        </motion.div>
+
+        <motion.div
+          className="flex justify-center lg:justify-end shrink-0"
+          variants={item}
+          initial="hidden"
+          animate="visible"
+        >
+          <img
+            src={personalInfo.image}
+            alt={`${personalInfo.name} profile`}
+            className="w-56 h-56 sm:w-72 sm:h-72 rounded-2xl object-contain bg-[#0b0e18] border-4 border-violet-500/50 shadow-2xl shadow-violet-950/40"
+          />
         </motion.div>
       </div>
 
